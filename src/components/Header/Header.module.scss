@@ -1,0 +1,24 @@
+@use '../../styles/global' as *;
+
+.header {
+  display: flex;
+  align-items: center;
+  background: $black; 
+  min-height: 6.8rem;
+  padding: 0 1.5rem;
+
+  &__logo {
+    max-width: 12.2rem;
+  }
+
+  &__side {
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+    margin-left: auto;
+  }
+
+  &__icon {
+    width: 2.5rem;
+  }
+}

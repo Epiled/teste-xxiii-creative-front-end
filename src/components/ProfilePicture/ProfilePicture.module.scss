@@ -1,0 +1,26 @@
+@use '../../styles/global' as *;
+
+.ProfilePicture {
+  display: inline-block;
+  position: relative;
+  border-radius: 100%;
+  border: .1rem solid $charcoal;
+  overflow: hidden;
+
+  &--P {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+
+  &--M {
+    width: 5.6rem;
+    height: 5.6rem;
+  }
+
+  &__img {
+    position: absolute;
+    width: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

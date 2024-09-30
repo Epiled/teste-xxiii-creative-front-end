@@ -1,3 +1,4 @@
+import './styles/global.scss';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Info from "./pages/Info";
 import EditProfile from "./pages/EditProfile";
@@ -5,7 +6,6 @@ import Photos from "./pages/Photos";
 import Preference from "./pages/Preference";
 import NotFound from "./pages/NotFound";
 
-import './styles/global.scss'
 
 const App = () => {
 

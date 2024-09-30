@@ -1,5 +1,5 @@
-// styles.scss
-@forward '_colors';
-@forward '_variables';
-@forward '_fonts';
+// base.scss
 @use 'resetCSS';
+@use '_variables' as *;
+@use '_fonts' as *;
+@forward './_colors';
