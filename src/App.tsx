@@ -5,6 +5,8 @@ import Photos from "./pages/Photos";
 import Preference from "./pages/Preference";
 import NotFound from "./pages/NotFound";
 
+import './styles/global.scss'
+
 const App = () => {
 
   return (
