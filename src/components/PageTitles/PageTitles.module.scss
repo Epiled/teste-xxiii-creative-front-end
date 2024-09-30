@@ -1,0 +1,36 @@
+@use '../../styles/global' as *;
+
+.pageTitles {
+  display: flex;
+  align-items: center;
+  column-gap: 1.5rem;
+  padding: 0 1.5rem;
+
+  &__back {
+    width: 4.8rem;
+    height: 4.8rem;
+    background: $charcoal;
+    border-radius: 100%;
+    border: 0;
+  }
+
+  &__icon {
+    width: 2.4rem;
+  }
+
+  &__title {
+    color: $white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    margin-bottom: .7rem;
+  }
+
+  &__conf {
+    color: $gray-light;
+    font-size: 1.4rem;
+    font-family: 'Roboto', sans-serif;
+
+  }
+}

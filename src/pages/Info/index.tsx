@@ -1,15 +1,15 @@
 import '../../styles/global.scss';
 import Header from "../../components/Header";
-import ProfilePicture from '../../components/ProfilePicture';
+import PageTitles from '../../components/PageTitles';
 
 const Info = () => {
   return (
     <>
       <Header />
+      <PageTitles title='Profile' url='' />
       <h1>
         Página Info
       </h1>
-      <ProfilePicture size='M' />
     </>
   )
 }
