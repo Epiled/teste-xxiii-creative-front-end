@@ -1,3 +1,5 @@
-@import url(resetCSS.scss);
-@import url(_colors.scss);
-@import url(_variables.scss);
+// styles.scss
+@forward '_colors';
+@forward '_variables';
+@forward '_fonts';
+@use 'resetCSS';
