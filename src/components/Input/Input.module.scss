@@ -3,6 +3,10 @@
 .input {
   @extend %display-column;
 
+  &--disabled {
+    opacity: .25;
+  }
+
   &__top {
     gap: .4rem;
     position: relative;
@@ -21,6 +25,10 @@
     }
   }
 
+  &__wrapper {
+    position: relative;
+  }
+
   &__ipt {
     background: $dawn;
     border-radius: 2.4rem;
@@ -29,6 +37,28 @@
     font-size: 1.4rem;
     padding: 0 1.5rem;
     min-height: 4.8rem;
+    position: relative;
+    z-index: 2;
+
+
+    &--custom {
+      padding: 0 1.5rem 0 2rem;
+      @extend %default-display;
+    }
+  }
+
+  &__custom {
+    display: none;
+    position: absolute;
+    top: 0;
+    background: $dawn;
+    border-radius: 2.4rem;
+    width: 100%;
+    z-index: 1;
+
+    &--active {
+      display: block;
+    }
   }
 
   &__tipe {
@@ -43,6 +73,22 @@
 
   &__iconTipe {
     width: 1.6rem;
+  }
+
+  &__icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-right: 1rem;
+
+    &--arrow {
+      transform: rotate(270deg);
+      margin-right: 0;
+      margin-left: auto;
+    }
+
+    &--active {
+      transform: rotate(90deg);
+    }
   }
 
   &__txt {
@@ -66,5 +112,20 @@
 
   &__option {
     font-size: 1.4rem;
+    padding: 1.5rem 2rem;
+    color: $white;
+
+    &:hover {
+      background: $gray-mid;
+    }
+
+    &:first-of-type {
+      border-radius: 2.4rem 2.4rem 0 0;
+      padding-top: calc(4.8rem + 1.5rem);
+    }
+
+    &:last-of-type {
+      border-radius: 0 0 2.4rem 2.4rem;
+    }
   }
 }

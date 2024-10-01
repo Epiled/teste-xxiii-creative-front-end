@@ -1,0 +1,57 @@
+@use '../../styles/global' as *;
+
+.allowRequests {
+  gap: 1.5rem;
+  @extend %default-display;
+
+  &__icon {
+    width: 4rem;
+  }
+
+  &__title {
+    color: $white;
+    font-weight: 400;
+    line-height: 160%;
+    @extend %default-roboto;
+  }
+
+  &__txt {
+    color: $gray-light;
+    line-height: 150%;
+    font-size: 1.2rem;
+    @extend %default-roboto;
+  }
+
+  &__label {
+    position: relative;
+    width: 5rem;
+    height: 3rem;
+    align-self: center;
+    border: .1rem solid $gray-dark;
+    background: $purple;
+    border-radius: 3rem;
+    padding: .4rem;
+    cursor: pointer;
+  }
+
+  &__ipt {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+
+  &__bolinha {
+    position: absolute;
+    top: .4rem;
+    left: 50%;
+    width: 2rem;
+    height: 2rem;
+    background: $peach;
+    border-radius: 50%;
+    transition: transform .4s;
+
+    &--active {
+      transform: translateX(-2rem);
+    }
+  }
+}
