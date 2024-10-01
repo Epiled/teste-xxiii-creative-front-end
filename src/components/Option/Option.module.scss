@@ -1,26 +1,20 @@
 @use '../../styles/global' as *;
 
-%text-style {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.4rem;
-  color: $white;
-}
-
 .option {
-  display: flex;
-  align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
-  min-height: 6.4rem;
   border-bottom: .1rem solid $gray-dark;
+  min-height: 6.4rem;
+  @extend %default-display;
 
   &__type {
-    @extend %text-style;
+    color: $white;
+    @extend %default-roboto;
   }
 
   &__txt {
-    @extend %text-style;
     color: $gray-light;
+    @extend %default-roboto;
 
     &--empty {
       color: $gray-mid;
@@ -28,9 +22,8 @@
   }
 
   &__side {
-    display: flex;
-    align-items: center;
     gap: 1.5rem;
+    @extend %default-display;
   }
 
   &__icon {

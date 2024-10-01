@@ -1,14 +1,11 @@
 @use '../../../styles/global' as *;
 
 .info {
-  padding: 0 1.5rem;
-  display: flex;
-  flex-direction: column;
+  @extend %display-column;
   gap: 2.4rem;
 
   &__picture {
-    display: flex;
-    align-items: center;
+    @extend %default-display;
     column-gap: .8rem;
   }
 }

@@ -1,18 +1,15 @@
 @use '../../styles/global' as *;
 
 .editProfile {
-  display: flex;
-  flex-direction: column;
   gap: 2.4rem;
   padding: 0 1.5rem;
+  @extend %display-column;
 
   &__txt {
     color: $gray;
     display: inline-block;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.2rem;
-    line-height: 150%;
     margin-top: .4rem;
+    @include font-custom(Roboto, 1.2rem, $height: 150%);
 
     &--desc {
       color: $faded;
@@ -21,15 +18,13 @@
 
   &__notification {
     border-radius: 1.6rem;
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
     background: $midnight;
+    padding: 1.5rem;
+    @extend %display-column;
 
     span {
-      display: flex;
-      align-items: center;
       column-gap: .4rem;
+      @extend %default-display;
 
       img {
         width: 2.4rem;
@@ -37,48 +32,42 @@
     }
 
     h3 {
-      font-family: 'Roboto', sans-serif;
-      font-size: 1.4rem;
       color: $white;
+      @extend %default-roboto;
     }
 
     p {
       color: $gray;
-      font-family: 'Roboto', sans-serif;
-      font-size: 1.4rem;
       margin-top: .4rem;
       margin-bottom: 1.6rem;
       line-height: 150%;
+      @extend %default-roboto;
+
     }
   }
 
   &__ipts {
-    display: flex;
-    flex-direction: column;
     row-gap: 1.6rem;
+    @extend %display-column;
   }
 
   &__preview {
-    display: flex;
-    flex-direction: column;
     gap: .4rem;
+    @extend %display-column;
   }
 
   &__top {
-    display: flex;
-    align-items: center;
+    position: relative;
     gap: .4rem;
     margin-bottom: .4rem;
-    position: relative;
+    @extend %default-display;
   }
 
   &__title {
-    display: flex;
-    flex-direction: column;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.2rem;
     color: $white;
     gap: .4rem;
+    @include font-custom(Roboto, 1.2rem);
+    @extend %display-column;
   }
 
   &__tipe {
@@ -99,22 +88,21 @@
     position: absolute;
     top: 100%;
     left: 0;
-    max-width: 20rem;
-    min-width: 20rem;
-    width: 100%;
+    display: none;
+    color: $white;
+    font-size: 1rem;
     background: $dawn;
     border-radius: 1.5rem;
     border: .1rem solid $gray-dark;
-    display: none;
     padding: 1.5rem;
-    font-size: 1rem;
-    color: $white;
+    width: 100%;
+    max-width: 20rem;
+    min-width: 20rem;
   }
 
   &__url {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.4rem;
     color: $gray-light;
+    @extend %default-roboto;
 
     &--desc {
       color: $white;
@@ -123,8 +111,7 @@
 
   &__btns {
     margin-top: 3.6rem;
-    display: flex;
-    flex-direction: column;
     row-gap: 1.5rem;
+    @extend %display-column;
   }
 }

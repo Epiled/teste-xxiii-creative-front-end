@@ -1,10 +1,9 @@
 @use '../../styles/global' as *;
 
 .pageTitles {
-  display: flex;
-  align-items: center;
   column-gap: 1.5rem;
-  padding: 0 1.5rem 1.5rem 1.5rem;
+  padding: 0 0 1.5rem 0;
+  @extend %default-display;
 
   &__back {
     width: 4.8rem;
@@ -20,17 +19,12 @@
 
   &__title {
     color: $white;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.4rem;
-    font-weight: 500;
-    text-transform: uppercase;
     margin-bottom: .7rem;
+    @include font-custom(Montserrat, 1.4rem, 500, $transform: uppercase);
   }
 
   &__conf {
     color: $gray-light;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.4rem;
-
+    @include font-custom(Roboto, 1.4rem);
   }
 }

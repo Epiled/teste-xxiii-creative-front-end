@@ -1,5 +1,4 @@
 import { Button } from '../../components/Buttons';
-import Header from '../../components/Header';
 import { Input } from '../../components/Input';
 import PageTitles from '../../components/PageTitles';
 import styles from './EditProfile.module.scss'
@@ -9,7 +8,6 @@ const EditProfile = () => {
 
   return (
     <>
-      <Header />
       <PageTitles title={title} url='' />
 
       <main className={styles.editProfile}>

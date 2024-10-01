@@ -1,0 +1,39 @@
+%default-display {
+  display: flex;
+  align-items: center;
+}
+
+%display-column {
+  display: flex;
+  flex-direction: column;
+}
+
+%default-roboto {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.4rem;
+}
+
+@mixin display-custom($direction) {
+  @extend %default-display;
+  flex-direction: $direction;
+}
+
+@mixin font-custom($family : 'Roboto', $size : '1.4rem', $weight: 400, $transform: null, $height: null, $spacing: null) {
+  font-family: $family, sans-serif;
+  font-size: $size;
+
+  font-weight: $weight;
+
+  @if $transform {
+    text-transform: $transform;
+  }
+
+  @if $height {
+    line-height: $height;
+  }
+
+  @if $spacing {
+    letter-spacing: $spacing;
+  }
+}
+
