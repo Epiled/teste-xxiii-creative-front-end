@@ -3,7 +3,7 @@ import Header from "../../components/Header";
 import PageTitles from '../../components/PageTitles';
 import Tabs from '../../components/Tabs';
 
-const Info = () => {
+const Profile = () => {
   const title = 'Profile';
 
   return (
@@ -15,4 +15,4 @@ const Info = () => {
   )
 }
 
-export default Info;
+export default Profile;
