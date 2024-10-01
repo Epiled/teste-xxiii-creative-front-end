@@ -1,17 +1,16 @@
+import options from '../../../mocks/infoOptions';
+import Option from '../../Option';
 import styles from './Info.module.scss';
 
 const Info = () => {
+
   return (
     <div className={styles.info}>
-      <div className={styles.info__option}>
-        <p className={styles.info__txt}>
-          Profile
-        </p>
-
-        <div>
-          Scalet
-        </div>
-      </div>
+      {options.map((option, index) => {
+        return (
+          <Option key={index} {...option} />
+        )
+      })}
     </div>
   )
 }

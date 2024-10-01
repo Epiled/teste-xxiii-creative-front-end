@@ -36,8 +36,7 @@ const InputSelect = ({ id, label, values }: ISelect) => {
       <label
         className={`
           ${styles.input__label} 
-          ${styles[`input__label--select`]}
-          `}
+          ${styles[`input__label--select`]}`}
         htmlFor={id}
       >
         {label}

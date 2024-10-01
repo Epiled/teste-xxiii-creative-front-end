@@ -1,6 +1,7 @@
 import '../../styles/global.scss';
 import Header from "../../components/Header";
 import PageTitles from '../../components/PageTitles';
+import Tabs from '../../components/Tabs';
 
 const Info = () => {
   const title = 'Profile';
@@ -9,9 +10,7 @@ const Info = () => {
     <>
       <Header />
       <PageTitles title={title} url='' />
-      <h1>
-        Página Info
-      </h1>
+      <Tabs />
     </>
   )
 }
