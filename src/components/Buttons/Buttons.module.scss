@@ -1,0 +1,14 @@
+@use '../../styles/global' as *;
+
+.button {
+  border-radius: 2.4rem;
+  min-height: 4.8rem;
+  flex: 1;
+  color: $white;
+  background: $charcoal;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .05rem;
+}

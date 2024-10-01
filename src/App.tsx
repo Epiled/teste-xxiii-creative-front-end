@@ -1,3 +1,4 @@
+import './styles/resetCSS.scss';
 import './styles/global.scss';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Info from "./pages/Info";
