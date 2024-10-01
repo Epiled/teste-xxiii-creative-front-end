@@ -8,7 +8,7 @@ interface IProp {
 const ProfilePicture = ({size = 'P'}: IProp) => {
   return (
     <Link
-      to={'/'}
+      to={'/edit-profile'}
       className={`
         ${styles.ProfilePicture} 
         ${styles[`ProfilePicture--${size}`]}

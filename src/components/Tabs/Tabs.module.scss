@@ -1,0 +1,13 @@
+@use '../../styles/global' as *;
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.4rem;
+
+  &__navigation {
+    padding: 0 1.5rem;
+    display: flex;
+    width: 100%;
+  }
+}

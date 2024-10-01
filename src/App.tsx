@@ -14,9 +14,9 @@ const App = () => {
       <Routes>
         <Route path="/">
           <Route path="/" index element={<Info />} />
-          <Route path="/edit-profile" index element={<EditProfile />} />
-          <Route path="/photos" index element={<Photos />} />
-          <Route path="/preference" index element={<Preference />} />
+          <Route path="edit-profile" index element={<EditProfile />} />
+          <Route path="photos" index element={<Photos />} />
+          <Route path="preference" index element={<Preference />} />
           <Route path='*' element={<NotFound />} />
         </Route>
       </Routes>

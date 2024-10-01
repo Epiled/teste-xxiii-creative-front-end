@@ -3,10 +3,12 @@ import Header from "../../components/Header";
 import PageTitles from '../../components/PageTitles';
 
 const Info = () => {
+  const title = 'Profile';
+
   return (
     <>
       <Header />
-      <PageTitles title='Profile' url='' />
+      <PageTitles title={title} url='' />
       <h1>
         Página Info
       </h1>
