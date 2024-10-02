@@ -1,19 +1,20 @@
 import styles from './Photo.module.scss';
+import photos from '../../../mocks/photosGallery';
 
 const Photo = () => {
+
+  const galeria = Array.from({ length: 9 }, (_, index) => (
+    <img key={index}
+      className={styles.photo__img}
+      src={`/images/${photos[index] ? photos[index].foto : 'not-image.png'}`}
+      alt={`${photos[index] ? photos[index].desc : ''}`}
+    />
+  ))
+
+
   return (
     <div className={styles.photo}>
-      <img className={styles.photo__img} src="/images/flower-1.png" alt="" />
-
-      <img className={styles.photo__img} src="/images/flower-2.png" alt="" />
-      <img className={styles.photo__img} src="/images/flower-2.png" alt="" />
-      <img className={styles.photo__img} src="/images/flower-2.png" alt="" />
-
-      <img className={styles.photo__img} src="/images/not-image.png" alt="" />
-      <img className={styles.photo__img} src="/images/not-image.png" alt="" />
-      <img className={styles.photo__img} src="/images/not-image.png" alt="" />
-      <img className={styles.photo__img} src="/images/not-image.png" alt="" />
-      <img className={styles.photo__img} src="/images/not-image.png" alt="" />
+      {galeria}
     </div>
   )
 }

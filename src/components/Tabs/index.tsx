@@ -23,11 +23,9 @@ const Tabs = () => {
 
       </nav>
 
-      <div className={styles.tabs__container}>
-        {activeTab === 'Info' && <Info />}
-        {activeTab === 'Photos' && <Photo />}
-        {activeTab === 'Preference' && <Preference />}
-      </div>
+      {activeTab === 'Info' && <Info />}
+      {activeTab === 'Photos' && <Photo />}
+      {activeTab === 'Preference' && <Preference />}
     </main>
   )
 }
