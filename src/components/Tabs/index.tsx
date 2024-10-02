@@ -15,7 +15,7 @@ const Tabs = () => {
 
   return (
     <main className={styles.tabs}>
-      <nav className={styles.tabs__navigation}>
+      <nav className={styles.tabs__navigation} role="tablist">
 
         <TabButton text='Info' activeTab={activeTab} setActiveTab={setActiveTab} />
         <TabButton text='Photos' activeTab={activeTab} setActiveTab={setActiveTab} />
@@ -23,11 +23,11 @@ const Tabs = () => {
 
       </nav>
 
-      {/* <div className={styles.tabs__container}> */}
+      <div className={styles.tabs__container}>
         {activeTab === 'Info' && <Info />}
         {activeTab === 'Photos' && <Photo />}
         {activeTab === 'Preference' && <Preference />}
-      {/* </div> */}
+      </div>
     </main>
   )
 }

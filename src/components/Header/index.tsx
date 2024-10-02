@@ -12,12 +12,8 @@ const Header = () => {
         alt='Logo Roses'
       />
       <div className={styles.header__side}>
-        <img
-          className={styles.header__icon}
-          src='/icons/chat.png'
-          alt='Abrir Chat'
-        />
-      <ProfilePicture />
+        <button className={styles.header__chatBtn} aria-label="Abrir Chat" />
+        <ProfilePicture />
       </div>
     </header>
   )

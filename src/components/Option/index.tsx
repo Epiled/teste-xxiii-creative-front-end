@@ -11,8 +11,8 @@ const Option = ({ type, txt, special }: IOption ) => {
 
       <div className={styles.option__side}>
         <p className={`
-        ${styles.option__txt}
-        ${!txt && styles[`option__txt--empty`]}`}
+          ${styles.option__txt}
+          ${!txt && styles[`option__txt--empty`]}`}
         >
           {txt ? txt : 'add'}
         </p>
@@ -20,7 +20,7 @@ const Option = ({ type, txt, special }: IOption ) => {
         {special &&
           <img
             src="/icons/badge-check.png"
-            alt=""
+            alt="Selo de usuário verificado"
             width="24"
             height="24"
           />

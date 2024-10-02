@@ -1,23 +1,20 @@
 import { Link } from "react-router-dom";
 import styles from "./ProfilePicture.module.scss"
+import IProfilePicture from "../../interfaces/IProfilePicture";
 
-interface IProp {
-  size?: 'P' | 'M'
-}
-
-const ProfilePicture = ({size = 'P'}: IProp) => {
+const ProfilePicture = ({size = 'P'}: IProfilePicture) => {
   return (
     <Link
       to={'/edit-profile'}
       className={`
-        ${styles.ProfilePicture} 
-        ${styles[`ProfilePicture--${size}`]}
+        ${styles.profilePicture} 
+        ${styles[`profilePicture--${size}`]}
         `}
     >
       <img
         className={styles.header__profileImg}
         src='/images/modelo-1.png'
-        alt='Abrir Perfil'
+        alt='Abrir perfil de usuário'
       />
     </Link>
   )

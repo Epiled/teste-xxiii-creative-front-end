@@ -1,17 +1,23 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import styles from './AllowRequests.module.scss'
 
 const AllowRequests = () => {
 
   const [isChecked, setIsChecked] = useState(true);
 
-  const handleSwitchChange = () => {
+  const handleSwitchChange = useCallback(() => {
     setIsChecked((prev) => !prev);
-  };
+  }, []);
 
   return (
     <div className={styles.allowRequests}>
-      <img className={styles.allowRequests__icon} src="/icons/rose-gray.png" alt="" width={40} height={40} />
+      <img
+        className={styles.allowRequests__icon}
+        src="/icons/rose-gray.png"
+        alt=""
+        width={40}
+        height={40}
+      />
 
       <div>
         <h3 className={styles.allowRequests__title}>
@@ -24,16 +30,19 @@ const AllowRequests = () => {
 
       <label
         className={styles.allowRequests__label}
+        htmlFor='requestAllowInput'
       >
         <input
           className={styles.allowRequests__ipt}
+          id='requestAllowInput'
+          name='requestAllow'
           type="checkbox"
           checked={isChecked}
           onChange={handleSwitchChange}
         />
         <span className={`
           ${styles.allowRequests__bolinha}
-          ${!isChecked ? styles[`allowRequests__bolinha--active`] : ''}
+          ${!isChecked && styles[`allowRequests__bolinha--active`]}
           `}></span>
       </label>
     </div>

@@ -12,6 +12,7 @@
     font-weight: 400;
     line-height: 160%;
     @extend %display-default;
+    @extend %default-font;
   }
 
   &__txt {

@@ -1,9 +1,14 @@
-import { useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 import styles from './Input.module.scss';
 import IInput from '../../interfaces/IInput';
 
-const Input = ({ id, label, name, type = 'text', tipe, value = '' }: IInput) => {
+const Input = ({ id, label, name, type = 'text', tipe, value = '', onChange }: IInput) => {
   const [valueIpt, setValueIpt] = useState(value);
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setValueIpt(e.target.value);
+    if (onChange) onChange(e);
+  };
 
   return (
     <fieldset className={styles.input}>
@@ -16,7 +21,7 @@ const Input = ({ id, label, name, type = 'text', tipe, value = '' }: IInput) => 
         </label>
 
         {tipe && <div className={styles.input__tipe}>
-          <img className={styles.input__iconTipe} src='/icons/info.png' />
+          <img className={styles.input__iconTipe} alt='Mais informações sobre o campo' src='/icons/info.png' />
           <span className={styles.input__txt}>{tipe}</span>
         </div>}
       </div>
@@ -26,7 +31,7 @@ const Input = ({ id, label, name, type = 'text', tipe, value = '' }: IInput) => 
         name={name}
         type={type}
         value={valueIpt}
-        onChange={(e) => setValueIpt(e.target.value)}
+        onChange={handleChange}
       />
     </fieldset>
   )

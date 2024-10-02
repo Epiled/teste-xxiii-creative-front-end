@@ -14,7 +14,9 @@
     @include display(2rem);
   }
 
-  &__icon {
+  &__chatBtn {
     width: 2.5rem;
+    height: 2.5rem;
+    background: url(/icons/chat.png);
   }
 }

@@ -1,0 +1,26 @@
+@use '_colors' as *;
+
+:root {
+  --gray: #{$gray}; // Use interpolação para passar a variável SASS para CSS
+  --gray-light: #{$gray-light};
+  --gray-mid: #{$gray-mid};
+  --gray-dark: #{$gray-dark};
+
+  --charcoal: #{$charcoal};
+  --dawn: #{$dawn};
+  --faded: #{$faded};
+  --midnight: #{$midnight};
+
+  --white: #{$white};
+  --black: #{$black};
+
+  --dark-ink: #{$dark-ink};
+
+  --pink-hot: #{$pink-hot};
+  --peach: #{$peach};
+  --blue: #{$blue};
+
+  --purple: #{$purple};
+  --white-alt: #{$white-alt};
+  --white-alpha-45: #{$white-alpha-45};
+}

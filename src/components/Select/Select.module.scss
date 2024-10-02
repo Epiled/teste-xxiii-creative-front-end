@@ -51,16 +51,19 @@
   }
 
   &__list {
-    display: none;
     position: absolute;
     top: 0;
     background: $dawn;
     border-radius: 2.4rem;
     width: 100%;
+    max-height: 4.8rem;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
     z-index: 1;
 
     &--active {
-      display: block;
+      max-height: 20rem;
+      transition: max-height 0.3s ease-in-out;
     }
   }
 

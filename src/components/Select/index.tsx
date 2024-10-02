@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import styles from './Select.module.scss';
 import ISelect from '../../interfaces/ISelect';
 
@@ -7,6 +7,7 @@ const Select = ({ id, label, values, icon, disabled }: ISelect) => {
   const [isActive, setIsActive] = useState(false);
   const [selected, setSelected] = useState("Brasil");
   const [isDisabled] = useState(disabled || false);
+  const dropdownRef = useRef<HTMLDivElement>(null); // Ref para o dropdown
 
   const handleActive = () => {
     if (!isDisabled) setIsActive((prev) => !prev);
@@ -17,6 +18,21 @@ const Select = ({ id, label, values, icon, disabled }: ISelect) => {
     if (value) setSelected(value);
     handleActive();
   }
+
+  const handleClickOutside = (e: MouseEvent) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+      setIsActive(false); // Fecha o dropdown se o clique estiver fora
+    }
+  }
+
+  useEffect(() => {
+    // Adiciona o evento de clique global
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      // Remove o evento ao desmontar o componente
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+  }, []);
 
   return (
     <fieldset
@@ -31,7 +47,7 @@ const Select = ({ id, label, values, icon, disabled }: ISelect) => {
         {label}
       </label>
 
-      <div className={styles.select__wrapper}>
+      <div className={styles.select__wrapper} ref={dropdownRef}>
         <button
           className={styles.select__selected}
           disabled={isDisabled}
@@ -61,7 +77,7 @@ const Select = ({ id, label, values, icon, disabled }: ISelect) => {
           {values.map((value, index) => {
             return (
               <li
-                key={index}
+                key={value+index}
                 className={styles.select__item}
                 data-value={value}
                 role="option"

@@ -1,11 +1,11 @@
 import './styles/resetCSS.scss';
+// import './styles/root.scss';
 import './styles/global.scss';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import EditProfile from "./pages/EditProfile";
 import Profile from './pages/Profile';
 import NotFound from "./pages/NotFound";
 import DefaultWrapper from './components/DefaultWrapper';
-
 
 const App = () => {
 

@@ -6,7 +6,9 @@ const DefaultWrapper = () => {
   return (
     <div className={styles.defaultWrapper}>
       <Header />
-      <Outlet />
+      <main>
+        <Outlet />
+      </main>
     </div>
   )
 }

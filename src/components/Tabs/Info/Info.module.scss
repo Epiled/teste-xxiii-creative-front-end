@@ -1,9 +1,7 @@
 @use '../../../styles/global' as *;
 
 .info {
-
   @include display-column(2.4rem);
-  
 
   &__picture {
     @include display(.8rem);

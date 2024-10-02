@@ -35,7 +35,7 @@ const Preference = () => {
       <div>
         {options.map((option, index) => {
           return (
-            <Option key={index} {...option} />
+            <Option key={option.type+index} {...option} />
           )
         })}
       </div>

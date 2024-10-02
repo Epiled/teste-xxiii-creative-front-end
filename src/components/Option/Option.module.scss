@@ -10,11 +10,13 @@
   &__type {
     color: $white;
     @extend %display-default;
+    @extend %default-font;
   }
 
   &__txt {
     color: $gray-light;
     @extend %display-default;
+    @extend %default-font;
 
     &--empty {
       color: $gray-mid;
