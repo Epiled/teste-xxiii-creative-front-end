@@ -1,15 +1,15 @@
 import options from '../../../mocks/preferenceOptions';
 import AllowRequests from '../../AllowRequests';
 import { Button } from '../../Buttons';
-import { InputSelectCustom } from '../../Input';
 import Option from '../../Option';
+import Select from '../../Select';
 import styles from './Preference.module.scss';
 
 const Preference = () => {
   return (
     <div className={styles.preference}>
-
-      <InputSelectCustom
+      
+      <Select
         id="location"
         label="Location"
         values={[
@@ -21,7 +21,7 @@ const Preference = () => {
         disabled
       />
 
-      <InputSelectCustom
+      <Select
         id="languagem"
         label="Languagem"
         values={[
