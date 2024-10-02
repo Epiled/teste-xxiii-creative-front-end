@@ -15,7 +15,7 @@ XXIII FrontEnd Test - Front End
 
 Requisitos Técnicos:
 - O projeto deve ser desenvolvido utilizando React.js, TypeScript, HTML e SASS.
-- Crie um repositório no GitHub e, ao finalizar o teste, envie o link para o e-mail: detoti@gmail.com.
+- Crie um repositório no GitHub e, ao finalizar o teste, envie o link para o e-mail: xxxxxx@gmail.com.
 - Utilize em seu repositório commits no padrão: Conventional Commits
 
 Prazo:
