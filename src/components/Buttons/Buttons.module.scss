@@ -2,8 +2,8 @@
 
 .button {
   color: $white;
-  border-radius: 2.4rem;
   flex: 1;
+  border-radius: 2.4rem;
   min-height: 4.8rem;
   @include font-custom(Montserrat, 1rem, 600, uppercase, $spacing: 0.05rem);
 
@@ -33,7 +33,7 @@
     background: $midnight;
     border-radius: 2.4rem;
     justify-content: center;
-    @extend %default-display;
+    @extend %display-default;
   }
 
   &__core {

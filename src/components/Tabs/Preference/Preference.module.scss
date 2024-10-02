@@ -1,6 +1,5 @@
 @use '../../../styles/global' as *;
 
 .preference {
-  @extend %display-column;
-  gap: 2.4rem;
+  @include display-column(2.4rem);
 }

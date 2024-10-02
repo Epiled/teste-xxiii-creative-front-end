@@ -1,8 +1,8 @@
 @use '../../styles/global' as *;
 
 .editProfile {
-  gap: 2.4rem;
   padding: 0 1.5rem;
+  gap: 2.4rem;
   @extend %display-column;
 
   &__txt {
@@ -23,8 +23,7 @@
     @extend %display-column;
 
     span {
-      column-gap: .4rem;
-      @extend %default-display;
+      @include display(.4rem);
 
       img {
         width: 2.4rem;
@@ -33,7 +32,7 @@
 
     h3 {
       color: $white;
-      @extend %default-roboto;
+      @extend %default-font;
     }
 
     p {
@@ -41,7 +40,7 @@
       margin-top: .4rem;
       margin-bottom: 1.6rem;
       line-height: 150%;
-      @extend %default-roboto;
+      @extend %default-font;
 
     }
   }
@@ -58,9 +57,8 @@
 
   &__top {
     position: relative;
-    gap: .4rem;
     margin-bottom: .4rem;
-    @extend %default-display;
+    @include display(.4rem);
   }
 
   &__title {
@@ -74,7 +72,7 @@
     position: relative;
 
     &:hover {
-      .editProfile__previewtxt{
+      .editProfile__previewtxt {
         display: block;
       }
     }
@@ -102,7 +100,7 @@
 
   &__url {
     color: $gray-light;
-    @extend %default-roboto;
+    @extend %default-font;
 
     &--desc {
       color: $white;

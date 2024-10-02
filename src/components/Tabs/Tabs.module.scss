@@ -1,8 +1,7 @@
 @use '../../styles/global' as *;
 
 .tabs {
-  @extend %display-column;
-  row-gap: 2.4rem;
+  @include display-column(2.4rem);
 
   &__navigation {
     display: flex;

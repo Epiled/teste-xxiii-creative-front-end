@@ -4,17 +4,15 @@
   @extend %display-column;
 
   &__top {
-    gap: .4rem;
     position: relative;
     margin-bottom: .4rem;
-    @extend %default-display;
+    @include display(.4rem);
   }
 
   &__label {
     color: $white;
-    gap: .4rem;
     @include font-custom(Roboto, 1.2rem);
-    @extend %default-display;
+    @include display(.4rem);
   }
 
   &__ipt {
@@ -28,7 +26,6 @@
     position: relative;
     z-index: 2;
   }
-
 
   &__tipe {
     position: relative;

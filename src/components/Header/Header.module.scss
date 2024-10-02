@@ -1,18 +1,17 @@
 @use '../../styles/global' as *;
 
 .header {
-  @extend %default-display;
   background: $black; 
   min-height: 6.8rem;
+  @extend %display-default;
 
   &__logo {
     max-width: 12.2rem;
   }
 
   &__side {
-    @extend %default-display;
-    column-gap: 2rem;
     margin-left: auto;
+    @include display(2rem);
   }
 
   &__icon {

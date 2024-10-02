@@ -1,9 +1,8 @@
 @use '../../styles/global' as *;
 
 .pageTitles {
-  column-gap: 1.5rem;
   padding: 0 0 1.5rem 0;
-  @extend %default-display;
+  @include display(1.5rem);
 
   &__back {
     width: 4.8rem;

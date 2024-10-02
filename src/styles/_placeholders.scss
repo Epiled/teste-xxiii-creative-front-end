@@ -1,0 +1,14 @@
+%display-default {
+  display: flex;
+  align-items: center;
+}
+
+%display-column {
+  display: flex;
+  flex-direction: column;
+}
+
+%default-font {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.4rem;
+}

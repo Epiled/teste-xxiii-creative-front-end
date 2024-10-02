@@ -1,0 +1,36 @@
+@use '_placeholders' ;
+
+@mixin display($gap: null) {
+  @extend %display-default;
+
+  @if $gap {
+    gap: $gap;
+  }
+}
+
+@mixin display-column($gap: null) {
+  @extend %display-column;
+
+  @if $gap {
+    gap: $gap;
+  }
+}
+
+@mixin font-custom($family : 'Roboto', $size : '1.4rem', $weight: 400, $transform: null, $height: null, $spacing: null) {
+  font-family: $family, sans-serif;
+  font-size: $size;
+
+  font-weight: $weight;
+
+  @if $transform {
+    text-transform: $transform;
+  }
+
+  @if $height {
+    line-height: $height;
+  }
+
+  @if $spacing {
+    letter-spacing: $spacing;
+  }
+}

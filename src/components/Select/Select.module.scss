@@ -9,11 +9,9 @@
 
   &__label {
     color: $white;
-    gap: .4rem;
-    @include font-custom(Roboto, 1.2rem);
-    @extend %default-display;
-
     margin-bottom: .4rem;
+    @include font-custom(Roboto, 1.2rem);
+    @include display(.4rem);
   }
 
   &__wrapper {
@@ -28,12 +26,12 @@
     color: $white;
     font-size: 1.4rem;
     min-height: 4.8rem;
+    width: -webkit-fill-available;
     position: relative;
     z-index: 2;
-    width: -webkit-fill-available;
 
     padding: 0 1.5rem 0 2rem;
-     @extend %default-display;
+    @extend %display-default;
   }
 
   &__icon {
@@ -67,9 +65,9 @@
   }
 
   &__item {
+    color: $white;
     font-size: 1.4rem;
     padding: 1.5rem 2rem;
-    color: $white;
 
     &:hover {
       background: $gray-mid;

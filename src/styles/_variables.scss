@@ -1,39 +1,26 @@
-%default-display {
-  display: flex;
-  align-items: center;
+@use '_colors';
+
+:root {
+  --gray: #757575;
+  --gray-light: #999999;
+  --gray-mid: #555555;
+  --gray-dark: #333333;
+
+  --charcoal: #232323;
+  --dawn: #111111;
+  --faded: #cccccc;
+  --midnight: #1a1a1a;
+
+  --white: #ffffff;
+  --black: #000000;
+
+  --dark-ink: #ffffff;
+
+  --pink-hot: #ff007a;
+  --peach: #ff8383;
+  --blue: #2081e2;
+
+  --purple: #3f0628;
+  --white-alt: #f4f4f4;
+  --white-alpha-45: #ffffff73;
 }
-
-%display-column {
-  display: flex;
-  flex-direction: column;
-}
-
-%default-roboto {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.4rem;
-}
-
-@mixin display-custom($direction) {
-  @extend %default-display;
-  flex-direction: $direction;
-}
-
-@mixin font-custom($family : 'Roboto', $size : '1.4rem', $weight: 400, $transform: null, $height: null, $spacing: null) {
-  font-family: $family, sans-serif;
-  font-size: $size;
-
-  font-weight: $weight;
-
-  @if $transform {
-    text-transform: $transform;
-  }
-
-  @if $height {
-    line-height: $height;
-  }
-
-  @if $spacing {
-    letter-spacing: $spacing;
-  }
-}
-

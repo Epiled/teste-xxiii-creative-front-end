@@ -1,20 +1,20 @@
 @use '../../styles/global' as *;
 
 .option {
-  justify-content: space-between;
-  gap: 1.5rem;
   border-bottom: .1rem solid $gray-dark;
   min-height: 6.4rem;
-  @extend %default-display;
+  justify-content: space-between;
+  @include display(1.5rem);
+
 
   &__type {
     color: $white;
-    @extend %default-roboto;
+    @extend %display-default;
   }
 
   &__txt {
     color: $gray-light;
-    @extend %default-roboto;
+    @extend %display-default;
 
     &--empty {
       color: $gray-mid;
@@ -22,8 +22,7 @@
   }
 
   &__side {
-    gap: 1.5rem;
-    @extend %default-display;
+    @include display(1.5rem);
   }
 
   &__icon {

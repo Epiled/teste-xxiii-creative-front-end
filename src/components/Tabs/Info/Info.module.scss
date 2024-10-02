@@ -1,11 +1,11 @@
 @use '../../../styles/global' as *;
 
 .info {
-  @extend %display-column;
-  gap: 2.4rem;
+
+  @include display-column(2.4rem);
+  
 
   &__picture {
-    @extend %default-display;
-    column-gap: .8rem;
+    @include display(.8rem);
   }
 }
