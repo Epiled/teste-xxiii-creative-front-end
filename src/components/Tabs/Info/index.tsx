@@ -1,5 +1,5 @@
 import { useContext, useRef } from 'react';
-import options from '../../../mocks/infoOptions';
+import options from '../../../mocks/mockup-info-options';
 import { Button } from '../../Buttons';
 import Option from '../../Option';
 import ProfilePicture from '../../ProfilePicture';

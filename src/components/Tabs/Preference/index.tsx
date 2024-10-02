@@ -1,4 +1,6 @@
-import options from '../../../mocks/preferenceOptions';
+import languagens from '../../../mocks/mockup-languagens';
+import options from '../../../mocks/mockup-preference-options';
+import locations from '../../../mocks/mockupt-locations';
 import AllowRequests from '../../AllowRequests';
 import { Button } from '../../Buttons';
 import Option from '../../Option';
@@ -12,11 +14,7 @@ const Preference = () => {
       <Select
         id="location"
         label="Location"
-        values={[
-          'Brasil',
-          'Japão',
-          'Australia'
-        ]}
+        values={locations}
         icon='airplane'
         disabled
       />
@@ -24,11 +22,7 @@ const Preference = () => {
       <Select
         id="languagem"
         label="Languagem"
-        values={[
-          'Brasil',
-          'Japão',
-          'Australia'
-        ]}
+        values={languagens}
         icon='languagem'
       />
 

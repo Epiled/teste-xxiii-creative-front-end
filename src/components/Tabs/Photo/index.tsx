@@ -1,5 +1,5 @@
 import styles from './Photo.module.scss';
-import photos from '../../../mocks/photosGallery';
+import photos from '../../../mocks/mockup-photos-gallery';
 import { useRef, useState } from 'react';
 
 const Photo = () => {

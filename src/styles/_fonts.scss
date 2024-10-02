@@ -7,6 +7,7 @@
     local('Helvetica'),
     url('/fonts/Helvetica/Helvetica.woff') format('woff'),
     url('/fonts/Helvetica/Helvetica.ttf') format('truetype');
+  font-display: swap;
 }
 
 // Montserrat
@@ -18,6 +19,7 @@
     url('/fonts/Montserrat/Montserrat-Medium.woff2') format('woff2'),
     url('/fonts/Montserrat/Montserrat-Medium.woff') format('woff'),
     url('/fonts/Montserrat/Montserrat-Medium.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
@@ -29,6 +31,7 @@
     url('/fonts/Montserrat/Montserrat-SemiBold.woff2') format('woff2'),
     url('/fonts/Montserrat/Montserrat-SemiBold.woff') format('woff'),
     url('/fonts/Montserrat/Montserrat-SemiBold.ttf') format('truetype');
+  font-display: swap;
 }
 
 // Roboto
@@ -40,6 +43,7 @@
     local('Roboto'),
     url('/fonts/Roboto/Roboto-Regular.woff') format('woff'),
     url('/fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
@@ -50,6 +54,7 @@
     local('Roboto'),
     url('/fonts/Roboto/Roboto-Medium.woff') format('woff'),
     url('/fonts/Roboto/Roboto-Medium.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
@@ -60,6 +65,7 @@
     local('Roboto'),
     url('/fonts/Roboto/Roboto-Medium.woff') format('woff'),
     url('/fonts/Roboto/Roboto-Medium.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
@@ -70,6 +76,7 @@
     local('Roboto'),
     url('/fonts/Roboto/Roboto-Bold.woff') format('woff'),
     url('/fonts/Roboto/Roboto-Bold.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
@@ -80,4 +87,5 @@
     local('Roboto'),
     url('/fonts/Roboto/Roboto-Bold.woff') format('woff'),
     url('/fonts/Roboto/Roboto-Bold.ttf') format('truetype');
+  font-display: swap;
 }
