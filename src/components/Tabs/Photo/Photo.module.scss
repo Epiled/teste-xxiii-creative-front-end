@@ -6,6 +6,7 @@
   grid-template-rows: repeat(4, 1fr);
   grid-column-gap: .8rem;
   grid-row-gap: .8rem;
+  overflow: hidden;
 
   &__box {
     position: relative;
@@ -28,5 +29,12 @@
 
   &__img {
     border-radius: .8rem;
+  }
+
+  &__ipt {
+    display: none;
+    position: absolute;
+    left: -99rem;
+    opacity: 0;
   }
 }

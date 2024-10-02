@@ -1,9 +1,17 @@
 @use '../../../styles/global' as *;
 
 .info {
+  overflow: hidden;
   @include display-column(2.4rem);
 
   &__picture {
     @include display(.8rem);
+  }
+
+  &__ipt {
+    display: none;
+    position: absolute;
+    left: -99rem;
+    opacity: 0;
   }
 }
