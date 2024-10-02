@@ -7,7 +7,7 @@ interface IInput {
   type?: string;
   tipe?: string;
   value?: string | number;
-  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
 export default IInput;

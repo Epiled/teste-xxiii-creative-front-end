@@ -1,6 +1,6 @@
-import { Link, useNavigate } from "react-router-dom"
-import styles from "./PageTitles.module.scss"
-import IPageTitle from "../../interfaces/IPageTitle";
+import { Link, useNavigate } from 'react-router-dom'
+import styles from './PageTitles.module.scss'
+import IPageTitle from '../../interfaces/IPageTitle';
 
 const PageTitles = ({ title, url }: IPageTitle) => {
 
@@ -23,10 +23,10 @@ const PageTitles = ({ title, url }: IPageTitle) => {
       >
         <img
           className={styles.pageTitles__icon}
-          src="/icons/chevron-left.svg"
-          alt="Voltar à página anterior"
-          width="24"
-          height="24"
+          src='/icons/chevron-left.svg'
+          alt='Voltar à página anterior'
+          width='24'
+          height='24'
         />
       </button>
       <div>

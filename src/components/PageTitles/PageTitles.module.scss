@@ -19,7 +19,7 @@
   &__title {
     color: $white;
     margin-bottom: .7rem;
-    @include font-custom(Montserrat, 1.4rem, 500, $transform: uppercase);
+    @include font-custom(Montserrat, 1.4rem, 500, $transform: uppercase, $spacing: .05rem);
   }
 
   &__conf {

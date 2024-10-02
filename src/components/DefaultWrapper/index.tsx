@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom"
+import { Outlet } from 'react-router-dom'
 import styles from './DefaultWrapper.module.scss'
 import Header from "../Header";
 

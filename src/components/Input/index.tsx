@@ -21,7 +21,7 @@ const Input = ({ id, label, name, type = 'text', tipe, value = '', onChange }: I
         </label>
 
         {tipe && <div className={styles.input__tipe}>
-          <img className={styles.input__iconTipe} alt='Mais informações sobre o campo' src='/icons/info.png' />
+          <img className={styles.input__iconTipe} alt='Mais informações sobre o campo' src='/icons/info.svg' />
           <span className={styles.input__txt}>{tipe}</span>
         </div>}
       </div>

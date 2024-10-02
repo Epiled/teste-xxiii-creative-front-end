@@ -17,7 +17,7 @@ const EditProfile = () => {
             id='nome'
             label='Name'
             name='nome'
-            tipe="Dica Lorem Impsum"
+            tipe='Dica Lorem Impsum'
             value='Scarlet'
           />
 
@@ -26,7 +26,7 @@ const EditProfile = () => {
               id='username'
               label='Username'
               name='username'
-              tipe="Dica Lorem Impsum"
+              tipe='Dica Lorem Impsum'
               value='scarlet.roses'
             />
             <span className={styles.editProfile__txt}>
@@ -39,21 +39,21 @@ const EditProfile = () => {
           <div className={styles.editProfile__top}>
             <h3 className={styles.editProfile__title}>Profile</h3>
             <div className={styles.editProfile__tipe}>
-              <img className={styles.editProfile__iconTipe} src='/icons/info.png' />
+              <img className={styles.editProfile__iconTipe} src='/icons/info.svg' />
               <span className={styles.editProfile__previewtxt}>Lorem Impsum</span>
             </div>
           </div>
-          <a href="" className={styles.editProfile__url}>
+          <a href='' className={styles.editProfile__url}>
             https://roses.vip/<span className={styles[`editProfile__url--desc`]}>scarlet.roses</span>
           </a>
         </div>
 
-        <div className={styles.editProfile__notification}>
-          <span>
-            <h3>Identity Verification</h3>
-            <img src="/icons/check-black.png" alt="" width={24} height={24} />
+        <div className={styles.editProfile__box}>
+          <span className={styles.editProfile__boxTop}>
+            <h3 className={styles.editProfile__boxTitle}>Identity Verification</h3>
+            <img className={styles.editProfile__boxIcon} src='/icons/badge-verified-black.svg' alt='Icone de usúario não checkado' width={24} height={24} />
           </span>
-          <p>Let’s make sure nobody is trying to impersonate you.</p>
+          <p className={styles.editProfile__boxTxt}>Let’s make sure nobody is trying to impersonate you.</p>
           <Button text={'Verify Account'} type={'reverse'} />
         </div>
 
@@ -61,6 +61,7 @@ const EditProfile = () => {
           <Button text={'Done'} type={'gradient'} />
           <Button text={'Cancel'} type={'blank'} />
         </div>
+
       </main>
     </>
   )

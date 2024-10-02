@@ -10,13 +10,14 @@
   &__type {
     color: $white;
     @extend %display-default;
-    @extend %default-font;
+    @include font-custom($height: 160%);
   }
 
   &__txt {
+    text-align: end;
     color: $gray-light;
     @extend %display-default;
-    @extend %default-font;
+    @include font-custom($height: 160%);
 
     &--empty {
       color: $gray-mid;

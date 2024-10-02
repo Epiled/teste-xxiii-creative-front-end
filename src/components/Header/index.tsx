@@ -6,13 +6,13 @@ const Header = () => {
     <header className={styles.header}>
       <img
         className={styles.header__logo}
-        src='/images/branding.png'
+        src='/icons/branding.svg'
         width='122'
         height='36'
         alt='Logo Roses'
       />
       <div className={styles.header__side}>
-        <button className={styles.header__chatBtn} aria-label="Abrir Chat" />
+        <button className={styles.header__chatBtn} aria-label='Abrir Chat' />
         <ProfilePicture />
       </div>
     </header>

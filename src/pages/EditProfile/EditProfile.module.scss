@@ -2,8 +2,7 @@
 
 .editProfile {
   padding: 0 1.5rem;
-  gap: 2.4rem;
-  @extend %display-column;
+  @include display-column(2.4rem);
 
   &__txt {
     color: $gray;
@@ -16,43 +15,40 @@
     }
   }
 
-  &__notification {
+  &__box {
     border-radius: 1.6rem;
     background: $midnight;
     padding: 1.5rem;
     @extend %display-column;
+  }
 
-    span {
-      @include display(.4rem);
+  &__boxTop {
+    @include display(.4rem);
+  }
 
-      img {
-        width: 2.4rem;
-      }
-    }
+  &__boxTitle {
+    color: $white;
+    @include font-custom($weight: 700, $height: 150%)
+  }
 
-    h3 {
-      color: $white;
-      @extend %default-font;
-    }
+  &__boxIcon {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
 
-    p {
-      color: $gray;
-      margin-top: .4rem;
-      margin-bottom: 1.6rem;
-      line-height: 150%;
-      @extend %default-font;
-
-    }
+  &__boxTxt {
+    color: $gray;
+    margin-top: .4rem;
+    margin-bottom: 1.6rem;
+    @include font-custom($height: 150%)
   }
 
   &__ipts {
-    row-gap: 1.6rem;
-    @extend %display-column;
+    @include display-column(1.6rem);
   }
 
   &__preview {
-    gap: .4rem;
-    @extend %display-column;
+    @include display-column(.4rem);
   }
 
   &__top {
@@ -63,9 +59,8 @@
 
   &__title {
     color: $white;
-    gap: .4rem;
     @include font-custom(Roboto, 1.2rem);
-    @extend %display-column;
+    @include display-column(.4rem);
   }
 
   &__tipe {
@@ -109,7 +104,6 @@
 
   &__btns {
     margin-top: 3.6rem;
-    row-gap: 1.5rem;
-    @extend %display-column;
+    @include display-column(1.5rem);
   }
 }

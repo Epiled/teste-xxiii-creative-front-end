@@ -2,36 +2,62 @@
 
 .button {
   color: $white;
-  flex: 1;
   border-radius: 2.4rem;
   min-height: 4.8rem;
-  @include font-custom(Montserrat, 1rem, 600, uppercase, $spacing: 0.05rem);
+  flex: 1;
+  justify-content: center;
+  transform: scale(1);
+  transition: background .5s, transform .5s;
+  @extend %display-default;
+  @include font-custom(Montserrat, 1rem, 600, uppercase, 200%, 0.05rem);
 
-  &[data-type="default"] {
-    background: $charcoal;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.01);
   }
 
-  &[data-type="reverse"] {
+  &[data-type='default'] {
+    background: $charcoal;
+
+    &:hover {
+      background: $midnight;
+    }
+  }
+
+  &[data-type='reverse'] {
     background-image: linear-gradient(-85deg, $pink-hot, $peach);
     padding: .1rem;
+
+    &:hover {
+      background-image: linear-gradient(-85deg, $peach, $pink-hot);
+    }
   }
 
-  &[data-type="gradient"] {
+  &[data-type='gradient'] {
     background-image: linear-gradient(-85deg, $pink-hot, $peach);
     -webkit-box-shadow: inset 0 .1rem 0 0 $white-alpha-45;
     -moz-box-shadow: inset 0 .1rem 0 0 $white-alpha-45;
     box-shadow: inset 0 .1rem 0 0 $white-alpha-45;
+
+    &:hover {
+      background: $charcoal;
+    }
   }
 
-  &[data-type="blank"] {
+  &[data-type='blank'] {
     background: $black;
     color: $gray-light;
+
+    &:hover {
+      background: $charcoal;
+    }
   }
 
   &__wrapper {
     height: 4.6rem;
     background: $midnight;
     border-radius: 2.4rem;
+    width: 100%;
     justify-content: center;
     @extend %display-default;
   }

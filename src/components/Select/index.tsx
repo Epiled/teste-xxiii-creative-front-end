@@ -5,7 +5,7 @@ import ISelect from '../../interfaces/ISelect';
 const Select = ({ id, label, values, icon, disabled }: ISelect) => {
 
   const [isActive, setIsActive] = useState(false);
-  const [selected, setSelected] = useState("Brasil");
+  const [selected, setSelected] = useState('Brasil');
   const [isDisabled] = useState(disabled || false);
   const dropdownRef = useRef<HTMLDivElement>(null); // Ref para o dropdown
 
@@ -13,12 +13,14 @@ const Select = ({ id, label, values, icon, disabled }: ISelect) => {
     if (!isDisabled) setIsActive((prev) => !prev);
   }
 
+  // Seleciona uma opção e fecha as opcões
   const handleSelected = (e: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
     const value = e.currentTarget.dataset.value;
     if (value) setSelected(value);
     handleActive();
   }
 
+  // Checa se o usuário clicou fora do dropdown
   const handleClickOutside = (e: MouseEvent) => {
     if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
       setIsActive(false); // Fecha o dropdown se o clique estiver fora
@@ -52,14 +54,14 @@ const Select = ({ id, label, values, icon, disabled }: ISelect) => {
           className={styles.select__selected}
           disabled={isDisabled}
           aria-expanded={isActive} // Indica se o menu está expandido
-          aria-controls="dropdown-list" // Associa o botão com a lista
+          aria-controls='dropdown-list' // Associa o botão com a lista
           onClick={handleActive}
         >
-          {icon && <img src={`/icons/${icon}.png`} className={styles.select__icon} />}
+          {icon && <img src={`/icons/${icon}.svg`} className={styles.select__icon} />}
           {selected}
           <img
-            src="/icons/chevron-left.png"
-            alt=""
+            src='/icons/chevron-left.svg'
+            alt=''
             className={`
               ${styles.select__icon}
               ${styles[`select__icon--arrow`]}
@@ -67,11 +69,11 @@ const Select = ({ id, label, values, icon, disabled }: ISelect) => {
           />
         </button>
         <ul
-          id="dropdown-list"
+          id='dropdown-list'
           className={`
             ${styles.select__list}
             ${isActive && styles[`select__list--active`]}`}
-          role="listbox"
+          role='listbox'
           aria-labelledby={id}
         >
           {values.map((value, index) => {
@@ -80,7 +82,7 @@ const Select = ({ id, label, values, icon, disabled }: ISelect) => {
                 key={value+index}
                 className={styles.select__item}
                 data-value={value}
-                role="option"
+                role='option'
                 aria-selected={selected === value}
                 onClick={(e) => handleSelected(e)}
               >

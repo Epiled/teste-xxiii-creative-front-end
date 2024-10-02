@@ -15,7 +15,7 @@ const Tabs = () => {
 
   return (
     <main className={styles.tabs}>
-      <nav className={styles.tabs__navigation} role="tablist">
+      <nav className={styles.tabs__navigation} role='tablist'>
 
         <TabButton text='Info' activeTab={activeTab} setActiveTab={setActiveTab} />
         <TabButton text='Photos' activeTab={activeTab} setActiveTab={setActiveTab} />

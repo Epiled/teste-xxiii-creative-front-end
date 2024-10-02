@@ -6,9 +6,9 @@ const Button = ({ text = 'Button', type = 'default' }: IButton) => {
     <button className={styles.button} data-type={type}>
       {type !== 'reverse' ? text : (
         <div className={styles.button__wrapper}>
-          <div className={styles.button__core}>
+          <span className={styles.button__core}>
             {text}
-          </div>
+          </span>
         </div>
       )}
     </button>

@@ -16,7 +16,7 @@
   }
 }
 
-@mixin font-custom($family : 'Roboto', $size : '1.4rem', $weight: 400, $transform: null, $height: null, $spacing: null) {
+@mixin font-custom($family : 'Roboto', $size : 1.4rem, $weight: 400, $transform: null, $height: null, $spacing: null) {
   font-family: $family, sans-serif;
   font-size: $size;
 

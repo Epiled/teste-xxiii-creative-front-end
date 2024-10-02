@@ -19,19 +19,19 @@ const Option = ({ type, txt, special }: IOption ) => {
 
         {special &&
           <img
-            src="/icons/badge-check.png"
-            alt="Selo de usuário verificado"
-            width="24"
-            height="24"
+            src='/icons/badge-verified.svg'
+            alt='Selo de usuário verificado'
+            width='24'
+            height='24'
           />
         }
 
         <img
           className={styles.option__icon}
-          src="/icons/chevron-left.svg"
-          alt=""
-          width="24"
-          height="24"
+          src='/icons/chevron-left.svg'
+          alt=''
+          width='24'
+          height='24'
         />
       </div>
     </div>

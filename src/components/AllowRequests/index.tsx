@@ -13,8 +13,8 @@ const AllowRequests = () => {
     <div className={styles.allowRequests}>
       <img
         className={styles.allowRequests__icon}
-        src="/icons/rose-gray.png"
-        alt=""
+        src='/icons/roses-gray.svg'
+        alt=''
         width={40}
         height={40}
       />
@@ -36,7 +36,7 @@ const AllowRequests = () => {
           className={styles.allowRequests__ipt}
           id='requestAllowInput'
           name='requestAllow'
-          type="checkbox"
+          type='checkbox'
           checked={isChecked}
           onChange={handleSwitchChange}
         />
